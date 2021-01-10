@@ -185,11 +185,220 @@ public class CurrencyConverter {
                 conversionRate = 1;
         }
 
+        String baseUnit;
+        switch (base) {
+            case "EUR":
+                baseUnit = "€";
+                break;
+            case "USD":
+                baseUnit = "$";
+                break;
+            case "JPY":
+                baseUnit = "¥";
+                break;
+            case "BGN":
+                baseUnit = "лв";
+                break;
+            case "CZK":
+                baseUnit = "Kč";
+                break;
+            case "DKK":
+                baseUnit = "kr";
+                break;
+            case "GBP":
+                baseUnit = "£";
+                break;
+            case "HUF":
+                baseUnit = "Ft";
+                break;
+            case "PLN":
+                baseUnit = "zł";
+                break;
+            case "RON":
+                baseUnit = "L";
+                break;
+            case "SEK":
+                baseUnit = "kr";
+                break;
+            case "CHF":
+                baseUnit = "CHF";
+                break;
+            case "ISK":
+                baseUnit = "kr";
+                break;
+            case "NOK":
+                baseUnit = "kr";
+                break;
+            case "HRK":
+                baseUnit = "kn";
+                break;
+            case "RUB":
+                baseUnit = "₽";
+                break;
+            case "TRY":
+                baseUnit = "₺";
+                break;
+            case "AUD":
+                baseUnit = "AU$";
+                break;
+            case "BRL":
+                baseUnit = "R$";
+                break;
+            case "CAD":
+                baseUnit = "CA$";
+                break;
+            case "CNY":
+                baseUnit = "¥";
+                break;
+            case "HKD":
+                baseUnit = "HK$";
+                break;
+            case "IDR":
+                baseUnit = "Rp";
+                break;
+            case "ILS":
+                baseUnit = "₪";
+                break;
+            case "INR":
+                baseUnit = "₹";
+                break;
+            case "KRW":
+                baseUnit = "₩";
+                break;
+            case "MXN":
+                baseUnit = "Mex$";
+                break;
+            case "MYR":
+                baseUnit = "RM";
+                break;
+            case "NZD":
+                baseUnit = "NZ$";
+                break;
+            case "PHP":
+                baseUnit = "₱";
+                break;
+            case "SGD":
+                baseUnit = "S$";
+                break;
+            case "THB":
+                baseUnit = "฿";
+                break;
+            case "ZAR":
+                baseUnit = "R";
+                break;
+            default:
+                baseUnit = "";
+        }
+        String conversionUnit;
+        switch (conversionCurrency) {
+            case "EUR":
+                conversionUnit = "€";
+                break;
+            case "USD":
+                conversionUnit = "$";
+                break;
+            case "JPY":
+                conversionUnit = "¥";
+                break;
+            case "BGN":
+                conversionUnit = "лв";
+                break;
+            case "CZK":
+                conversionUnit = "Kč";
+                break;
+            case "DKK":
+                conversionUnit = "kr";
+                break;
+            case "GBP":
+                conversionUnit = "£";
+                break;
+            case "HUF":
+                conversionUnit = "Ft";
+                break;
+            case "PLN":
+                conversionUnit = "zł";
+                break;
+            case "RON":
+                conversionUnit = "L";
+                break;
+            case "SEK":
+                conversionUnit = "kr";
+                break;
+            case "CHF":
+                conversionUnit = "CHF";
+                break;
+            case "ISK":
+                conversionUnit = "kr";
+                break;
+            case "NOK":
+                conversionUnit = "kr";
+                break;
+            case "HRK":
+                conversionUnit = "kn";
+                break;
+            case "RUB":
+                conversionUnit = "₽";
+                break;
+            case "TRY":
+                conversionUnit = "₺";
+                break;
+            case "AUD":
+                conversionUnit = "AU$";
+                break;
+            case "BRL":
+                conversionUnit = "R$";
+                break;
+            case "CAD":
+                conversionUnit = "CA$";
+                break;
+            case "CNY":
+                conversionUnit = "¥";
+                break;
+            case "HKD":
+                conversionUnit = "HK$";
+                break;
+            case "IDR":
+                conversionUnit = "Rp";
+                break;
+            case "ILS":
+                conversionUnit = "₪";
+                break;
+            case "INR":
+                conversionUnit = "₹";
+                break;
+            case "KRW":
+                conversionUnit = "₩";
+                break;
+            case "MXN":
+                conversionUnit = "Mex$";
+                break;
+            case "MYR":
+                conversionUnit = "RM";
+                break;
+            case "NZD":
+                conversionUnit = "NZ$";
+                break;
+            case "PHP":
+                conversionUnit = "₱";
+                break;
+            case "SGD":
+                conversionUnit = "S$";
+                break;
+            case "THB":
+                conversionUnit = "฿";
+                break;
+            case "ZAR":
+                conversionUnit = "R";
+                break;
+            default:
+                conversionUnit = "";
+        }
+
         double result = amountInt * conversionRate;
         System.out.println("Base Currency:");
-        System.out.println(amountInt);
+        System.out.println(amountInt + baseUnit);
         System.out.println("Converted Currency");
-        System.out.println(result);
+        System.out.println(result + conversionUnit);
 
 
 
